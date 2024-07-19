@@ -14,6 +14,9 @@ jobs:
     strategy:
       matrix:
         python-version: [3.10.12] # Define Python versions here
+    env:
+      ADMIN_USER: ${{ secrets.ADMIN_USER }}
+      ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
       
